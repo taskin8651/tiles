@@ -486,8 +486,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     <li><span class="icon-location-2"></span>
                         <address>85 Ketch Harbour Road Bensal PA 19020</address>
                     </li>
-                    <li><span class="icon-paper-plane"></span> <a href="mailto:needhelp@company.com">needhelp@company.com</a></li>
-                    <li><span class="icon-phone-call"></span> <a href="tel:+9156980036420">+91 5698 0036 420</a></li>
+                    <li><span class="icon-paper-plane"></span> <a href="mailto:{{ $contactInfo->email }}">{{ $contactInfo->email }}</a></li>
+                    <li><span class="icon-phone-call"></span> <a href="tel:+91{{ $contactInfo->phone }}">+91 {{ $contactInfo->phone }}</a></li>
                 </ul><!-- /.sidebar-one__info__list -->
             </div><!-- /.sidebar-one__info -->
             <div class="sidebar-one__social floens-social sidebar-one__item">
