@@ -183,6 +183,13 @@ Route::get('/products/{product}', [ProductController::class, 'show'])->name('pro
 Route::get('/category/{category}', [IndexController::class, 'show'])
     ->name('category.show');
 
+    // web.php
+Route::get('/pdf/{id}', function($id){
+    $product = \App\Models\Product::findOrFail($id);
+    return response()->file($product->document->getPath());
+});
+
+
 
 Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.form');
 Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');

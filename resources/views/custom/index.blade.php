@@ -3,211 +3,115 @@
 @section('content')
 
 
-      <!-- main slider start -->
-        <section class="main-slider-three hero-slider">
-            <div class="hero-slider__social">
-                <a href="https://facebook.com/">
-                    <i class="icon-facebook" aria-hidden="true"></i>
-                    <span class="sr-only">Facebook</span>
-                </a>
-                <a href="https://twitter.com/">
-                    <i class="icon-twitter" aria-hidden="true"></i>
-                    <span class="sr-only">Twitter</span>
-                </a>
-                <a href="https://instagram.com/">
-                    <i class="icon-instagram" aria-hidden="true"></i>
-                    <span class="sr-only">Instagram</span>
-                </a>
-                <a href="https://youtube.com/">
-                    <i class="icon-youtube" aria-hidden="true"></i>
-                    <span class="sr-only">Youtube</span>
-                </a>
-            </div><!-- /.hero-slider__social -->
-            <div class="main-slider-three__border-top"></div><!-- /.main-slider-three__border-top -->
-            <div class="main-slider-three__border-right"></div><!-- /.main-slider-three__border-right -->
-            <div class="main-slider-three__border-left"></div><!-- /.main-slider-three__border-left -->
-            <div class="main-slider-three__border-bottom">
-                <div class="main-slider-three__border-bottom__inner"></div><!-- /.main-slider-three__border-bottom__inner -->
-            </div><!-- /.main-slider-three__border-bottom -->
-            <div class="main-slider-three__carousel floens-slick__carousel--with-counter" data-slick-options='{
+     <!-- main slider start -->
+        <section class="main-slider-two hero-slider">
+            <div class="main-slider-two__carousel floens-slick__carousel--with-counter" data-slick-options='{
 		"slidesToShow": 1,
 		"slidesToScroll": 1,
 		"autoplay": true,
 		"autoplaySpeed": 3000,
+		"fade": true,
 		"speed": 2000,
 		"infinite": true,
-		"fade": true,
-		"dots": false,
 		"arrows": true,
-		"prevArrow": "<button class=\"hero-slider__slick-button hero-slider__slick-button--prev\"><i class=\"icon-left-arrow\"><i></button>",
-		"nextArrow": "<button class=\"hero-slider__slick-button hero-slider__slick-button--next\"><i class=\"icon-right-arrow\"><i></button>"
+		"dots": false,
+		"prevArrow": "<button class=\"hero-slider__slick-button hero-slider__slick-button--prev\">Prev <i class=\"icon-right-arrow\"><i></button>",
+		"nextArrow": "<button class=\"hero-slider__slick-button hero-slider__slick-button--next\">Next <i class=\"icon-right-arrow\"><i></button>"
 
 	}'>
-                <div class="main-slider-three__item">
-                    <div class="main-slider-three__bg" style="background-image: url(assets/images/backgrounds/slider-3-1.jpg);"></div>
-                    <!-- /.main-slider-three__bg -->
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-12 col-lg-8 mx-auto">
-                                <div class="main-slider-three__content">
-                                    <div class="main-slider-three__circle-text">
-                                        <img src="assets/images/resources/medal.png" alt="medal" class="main-slider-three__circle-text__image">
-                                        <div class="main-slider-three__curved-circle curved-circle">
-                                            <!-- curved-circle start-->
-                                            <div class="main-slider-three__curved-circle__item curved-circle__item" data-circle-text-options='{
-									"radius": 84,
-									"forceWidth": true,
-									"forceHeight": true}'>
-                                                award winning flooring company
-                                            </div>
-                                        </div><!-- curved-circle end-->
-                                    </div><!-- /.main-slider-three__circle-text -->
-                                    <h2 class="main-slider-three__title">High Quality Tile & Flooring for your home</h2><!-- /.main-slider-three__title -->
-                                    <a href="/about" class="main-slider-three__btn floens-btn">
-                                        <span>discover more</span>
-                                        <i class="icon-right-arrow"></i>
-                                    </a><!-- /.main-slider-three__btn floens-btn -->
-                                </div><!-- /.main-slider-three__content -->
-                            </div><!-- /.col-md-10 -->
-                        </div><!-- /.row -->
-                    </div><!-- /..container -->
-                </div><!-- /.main-slider-three__item -->
-                <div class="main-slider-three__item">
-                    <div class="main-slider-three__bg" style="background-image: url(assets/images/backgrounds/slider-3-2.jpg);"></div>
-                    <!-- /.main-slider-three__bg -->
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-12 col-lg-8 mx-auto">
-                                <div class="main-slider-three__content">
-                                    <div class="main-slider-three__circle-text">
-                                        <img src="assets/images/resources/medal.png" alt="medal" class="main-slider-three__circle-text__image">
-                                        <div class="main-slider-three__curved-circle curved-circle">
-                                            <!-- curved-circle start-->
-                                            <div class="main-slider-three__curved-circle__item curved-circle__item" data-circle-text-options='{
-									"radius": 84,
-									"forceWidth": true,
-									"forceHeight": true}'>
-                                                award winning flooring company
-                                            </div>
-                                        </div><!-- curved-circle end-->
-                                    </div><!-- /.main-slider-three__circle-text -->
-                                    <h2 class="main-slider-three__title">High Quality Tile & Flooring for your home</h2><!-- /.main-slider-three__title -->
-                                    <a href="/about" class="main-slider-three__btn floens-btn">
-                                        <span>discover more</span>
-                                        <i class="icon-right-arrow"></i>
-                                    </a><!-- /.main-slider-three__btn floens-btn -->
-                                </div><!-- /.main-slider-three__content -->
-                            </div><!-- /.col-md-10 -->
-                        </div><!-- /.row -->
-                    </div><!-- /..container -->
-                </div><!-- /.main-slider-three__item -->
-                <div class="main-slider-three__item">
-                    <div class="main-slider-three__bg" style="background-image: url(assets/images/backgrounds/slider-3-3.jpg);"></div>
-                    <!-- /.main-slider-three__bg -->
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-12 col-lg-8 mx-auto">
-                                <div class="main-slider-three__content">
-                                    <div class="main-slider-three__circle-text">
-                                        <img src="assets/images/resources/medal.png" alt="medal" class="main-slider-three__circle-text__image">
-                                        <div class="main-slider-three__curved-circle curved-circle">
-                                            <!-- curved-circle start-->
-                                            <div class="main-slider-three__curved-circle__item curved-circle__item" data-circle-text-options='{
-									"radius": 84,
-									"forceWidth": true,
-									"forceHeight": true}'>
-                                                award winning flooring company
-                                            </div>
-                                        </div><!-- curved-circle end-->
-                                    </div><!-- /.main-slider-three__circle-text -->
-                                    <h2 class="main-slider-three__title">High Quality Tile & Flooring for your home</h2><!-- /.main-slider-three__title -->
-                                    <a href="/about" class="main-slider-three__btn floens-btn">
-                                        <span>discover more</span>
-                                        <i class="icon-right-arrow"></i>
-                                    </a><!-- /.main-slider-three__btn floens-btn -->
-                                </div><!-- /.main-slider-three__content -->
-                            </div><!-- /.col-md-10 -->
-                        </div><!-- /.row -->
-                    </div><!-- /..container -->
-                </div><!-- /.main-slider-three__item -->
-            </div><!-- /.main-slider-three__carousel -->
-        </section><!-- /.main-slider-three -->
+                <div class="main-slider-two__item">
+                    <div class="main-slider-two__bg" style="background-image: url(assets/images/backgrounds/slider-3-4.jpeg);"></div>
+                    <!-- /.main-slider-two__bg -->
+                    <div class="main-slider-two__wrapper container">
+                        <div class="main-slider-two__left">
+                            <div class="main-slider-two__content">
+                                <p class="main-slider-two__tagline">Welcome to floens tiles & flooring</p>
+                                <!-- /.main-slider-two__tagline -->
+                                <h4 class="main-slider-two__title">Precision Tiles <br> & best Flooring Solutions</h4>
+                                <!-- /.main-slider-two__title -->
+                               <!-- /.main-slider-two__btn floens-btn -->
+                            </div><!-- /.main-slider-two__content -->
+                        </div><!-- /.main-slider-two__left -->
+                     
+                    </div><!-- /.main-slider-two__wrapper .container -->
+                </div><!-- /.main-slider-two__item -->
+                <div class="main-slider-two__item">
+                    <div class="main-slider-two__bg" style="background-image: url(assets/images/backgrounds/slider-3-4.jpeg);"></div>
+                    <!-- /.main-slider-two__bg -->
+                    <div class="main-slider-two__wrapper container">
+                        <div class="main-slider-two__left">
+                            <div class="main-slider-two__content">
+                               <p class="main-slider-two__tagline">10+ Years of Excellence</p>
+<h4 class="main-slider-two__title">
+Quality Tiles <br> for Modern Living
+</h4>
+
+                                <!-- /.main-slider-two__title -->
+                               <!-- /.main-slider-two__btn floens-btn -->
+                            </div><!-- /.main-slider-two__content -->
+                        </div><!-- /.main-slider-two__left -->
+                      
+                    </div><!-- /.main-slider-two__wrapper .container -->
+                </div><!-- /.main-slider-two__item -->
+                <div class="main-slider-two__item">
+                    <div class="main-slider-two__bg" style="background-image: url(assets/images/backgrounds/slider-3-4.jpeg);"></div>
+                    <!-- /.main-slider-two__bg -->
+                    <div class="main-slider-two__wrapper container">
+                        <div class="main-slider-two__left">
+                            <div class="main-slider-two__content">
+                                <p class="main-slider-two__tagline">Style That Lasts</p>
+<h4 class="main-slider-two__title">
+Elegant Designs <br> Durable Flooring
+</h4>
+
+                                <!-- /.main-slider-two__title -->
+                               <!-- /.main-slider-two__btn floens-btn -->
+                            </div><!-- /.main-slider-two__content -->
+                        </div><!-- /.main-slider-two__left -->
+                      
+                    </div><!-- /.main-slider-two__wrapper .container -->
+                </div><!-- /.main-slider-two__item -->
+                <div class="main-slider-two__item">
+                    <div class="main-slider-two__bg" style="background-image: url(assets/images/backgrounds/slider-2-4.jpg);"></div>
+                    <!-- /.main-slider-two__bg -->
+                    <div class="main-slider-two__wrapper container">
+                        <div class="main-slider-two__left">
+                            <div class="main-slider-two__content">
+                              <p class="main-slider-two__tagline">Build with Confidence</p>
+<h4 class="main-slider-two__title">
+Trusted Tiles <br> for Every Space
+</h4>
+
+                                <!-- /.main-slider-two__title -->
+                               <!-- /.main-slider-two__btn floens-btn -->
+                            </div><!-- /.main-slider-two__content -->
+                        </div><!-- /.main-slider-two__left -->
+                       
+                    </div><!-- /.main-slider-two__wrapper .container -->
+                </div><!-- /.main-slider-two__item -->
+                <div class="main-slider-two__item">
+                    <div class="main-slider-two__bg" style="background-image: url(assets/images/backgrounds/slider-3-4.jpeg);"></div>
+                    <!-- /.main-slider-two__bg -->
+                    <div class="main-slider-two__wrapper container">
+                        <div class="main-slider-two__left">
+                            <div class="main-slider-two__content">
+                               <p class="main-slider-two__tagline">Complete Tile Solutions</p>
+<h4 class="main-slider-two__title">
+Floor • Wall <br> Sanitary Collection
+</h4>
+
+                                <!-- /.main-slider-two__title -->
+                               <!-- /.main-slider-two__btn floens-btn -->
+                            </div><!-- /.main-slider-two__content -->
+                        </div><!-- /.main-slider-two__left -->
+                        
+                    </div><!-- /.main-slider-two__wrapper .container -->
+                </div><!-- /.main-slider-two__item -->
+            </div><!-- /.my-slider -->
+        </section><!-- /.main-slider-two -->
         <!-- main slider end -->
 
-        <!-- about start -->
-        <section class="about-three section-space" id="about">
-            <div class="container">
-                <div class="row gutter-y-60">
-                    <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
-                        <div class="about-three__image">
-                            <div class="about-three__image__inner">
-                                <img src="assets/images/about/about-3-1.jpg" alt="about" class="about-three__image__one">
-                                <img src="assets/images/about/about-3-2.png" alt="about" class="about-three__image__two">
-                                <img src="assets/images/about/about-3-3.jpg" alt="about" class="about-three__image__three">
-                                <div class="about-three__image__shape"></div><!-- /.about-three__image__shape -->
-                            </div><!-- /.about-three__image__inner -->
-                        </div><!-- /.about-three__image -->
-                    </div><!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-                        <div class="about-three__content">
-                            <div class="sec-title @@extraClassName">
-
-                                <h6 class="sec-title__tagline">about us</h6><!-- /.sec-title__tagline -->
-
-                                <h3 class="sec-title__title">No 1. Tiles And Stone Company In Town</h3><!-- /.sec-title__title -->
-                            </div><!-- /.sec-title -->
-
-
-                            <div class="about-three__client wow fadeInUp" data-wow-duration="1500ms">
-                                <div class="about-three__client__image">
-                                    <img src="assets/images/resources/client-rating-1.jpg" alt="client">
-                                    <img src="assets/images/resources/client-rating-2.jpg" alt="client">
-                                    <img src="assets/images/resources/client-rating-3.jpg" alt="client">
-                                    <img src="assets/images/resources/client-rating-4.jpg" alt="client">
-                                </div><!-- /.about-three__client__image -->
-                                <div class="about-three__client__content">
-                                    <div class="floens-ratings about-three__ratings">
-                                        <span class="icon-star"></span>
-                                        <span class="icon-star"></span>
-                                        <span class="icon-star"></span>
-                                        <span class="icon-star"></span>
-                                        <span class="icon-star"></span>
-                                    </div><!-- /.product-ratings -->
-                                    <h4 class="about-three__client__text">Our Satisfied Client ratings</h4><!-- /.about-three__client__text -->
-                                </div><!-- /.about-three__client__content -->
-                            </div><!-- /.about-three__client -->
-                            <p class="about-three__text wow fadeInUp" data-wow-duration="1500ms">Tiles company, also known as a tile manufacturer or distributor, specializes in the production and distribution of various types of tiles used for a wide range of applications. These companies play a crucial</p><!-- /.about-three__text -->
-                            <div class="about-three__progress">
-                                <div class="progress-box">
-                                    <h4 class="progress-box__title">Hardwood Floor Repair</h4><!-- /.progress-box__title -->
-                                    <div class="progress-box__bar">
-                                        <div class="progress-box__bar__inner count-bar" data-percent='90%'>
-                                            <div class="progress-box__number count-text">90%</div>
-                                        </div>
-                                    </div><!-- /.progress-box__bar -->
-                                </div><!-- /.progress-box -->
-                                <div class="progress-box">
-                                    <h4 class="progress-box__title">Custom projects with unique designs</h4><!-- /.progress-box__title -->
-                                    <div class="progress-box__bar">
-                                        <div class="progress-box__bar__inner count-bar" data-percent='70%'>
-                                            <div class="progress-box__number count-text">70%</div>
-                                        </div>
-                                    </div><!-- /.progress-box__bar -->
-                                </div><!-- /.progress-box -->
-                            </div><!-- /.about-three__progress -->
-                            <div class="about-three__button wow fadeInUp" data-wow-duration="1500ms">
-                                <a href="/about" class="floens-btn about-three__btn">
-                                    <span>more about us</span>
-                                    <i class="icon-right-arrow"></i>
-                                </a><!-- /.floens-btn about-three__btn -->
-                            </div><!-- /.about-three__button -->
-                        </div><!-- /.about-three__content -->
-                    </div><!-- /.col-lg-6 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-            <img src="assets/images/shapes/about-shape-3-1.png" alt="shapes" class="about-three__shape-image">
-        </section><!-- /.about-three section-space -->
-        <!-- about end -->
+      
 
          <section class="work-page work-page--carousel section-space-bottom">
     <div class="container">
@@ -434,64 +338,52 @@
       
 
         <!-- projects start -->
-        <section class="projects-three" id="projects">
-            <div class="projects-three__bg floens-jarallax" data-jarallax data-speed="0.3" style="background-image: url(assets/images/backgrounds/projects-bg-3.jpg);"></div><!-- /.projects-three__bg -->
-            <div class="container">
-                <div class="projects-three__top">
-                    <div class="row gutter-y-50 align-items-center">
-                        <div class="col-lg-8 col-md-10">
-                            <div class="sec-title @@extraClassName">
+        <!-- shop start -->
+       <section class="projects-three" id="projects">
+    <div class="projects-three__bg floens-jarallax" data-jarallax data-speed="0.3" style="background-image: url(assets/images/backgrounds/projects-bg-3.jpg);">
+    </div>
 
-                                <h6 class="sec-title__tagline">projects</h6><!-- /.sec-title__tagline -->
-
-                                <h3 class="sec-title__title">Our Recent <br> Complete Projects</h3><!-- /.sec-title__title -->
-                            </div><!-- /.sec-title -->
-
-
-                        </div><!-- /.col-lg-8 -->
-                        <div class="col-lg-4">
-                            <div class="projects-three__top__button">
-                                <a href="/projects" class="floens-btn floens-btn--border">
-                                    <span>View All</span>
-                                    <i class="icon-right-arrow"></i>
-                                </a><!-- /.floens-btn floens-btn--border -->
-                            </div><!-- /.projects-three__top__button -->
-                        </div><!-- /.col-lg-4 -->
-                    </div><!-- /.row -->
-                </div><!-- /.projects-three__top -->
-               <div class="projects-three__grid">
-    @foreach($categories as $index => $category)
-        <div class="projects-three__card projects-three__card--{{ ['one','two','three','four','five'][$index] ?? 'one' }}">
-
-            <div class="projects-three__card__bg"
-                 style="background-image: url('{{ 
-                    $category->photo 
-                        ? $category->photo->url 
-                        : asset('assets/images/works/default.jpg') 
-                 }}');">
-            </div>
-
-            <div class="projects-three__card__content">
-                <div class="projects-three__card__top">
-                    <h3 class="projects-three__card__tagline">
-                        {{ $category->name }}
-                    </h3>
-                </div>
-
-                <h4 class="projects-three__card__title">
-                    <a href="{{ route('products.index', ['category' => $category->id]) }}">
-                        View Products
-                    </a>
-                </h4>
-            </div>
-
+    <div class="container mb-50 ">
+        <div class="sec-title sec-title--center mb-60">
+            <h6 class="sec-title__tagline">our categories</h6>
+            <h3 class="sec-title__title">
+                Let’s Explore Our <br> Tile Categories
+            </h3>
         </div>
-    @endforeach
-</div>
 
-            </div><!-- /.container -->
-        </section><!-- /.projects-three -->
-        <!-- projects end -->
+        <div class="row gutter-y-30">
+            @foreach($categories as $category)
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="product__item wow fadeInUp" data-wow-duration="1500ms">
+                        
+                        <div class="product__item__image">
+                            <img 
+                                src="{{ $category->photo ? $category->photo->url : asset('assets/images/products/default.jpg') }}"
+                                alt="{{ $category->name }}">
+                        </div>
+
+                        <div class="product__item__content">
+                            <h4 class="product__item__title">
+                                <a href="{{ route('products.index', ['category' => $category->id]) }}">
+                                    {{ $category->name }}
+                                </a>
+                            </h4>
+
+                            <a href="{{ route('products.index', ['category' => $category->id]) }}"
+                                class="floens-btn product__item__link">
+                                <span>View Products</span>
+                                <i class="icon-right-arrow"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            @endforeach
+        </div>
+
+    </div>
+</section>
+
 
 
         <!-- gallery slider start -->
@@ -846,7 +738,7 @@
             <div class="container">
                 <div class="client-carousel__one floens-owl__carousel owl-theme owl-carousel" data-owl-options='{
             "items": 5,
-            "margin": 65,
+            "margin": 25,
             "smartSpeed": 700,
             "loop":true,
             "autoplay": 6000,
@@ -868,18 +760,18 @@
                 },
                 "992":{
                     "items": 5,
-                    "margin": 70
+                    "margin": 40
                 },
                 "1200":{
                     "items": 6,
-                    "margin": 149
+                    "margin": 60
                 }
             }
             }'>
                      @foreach($brands as $brand)
                 @if($brand->logo)
                     <div class="client-carousel__one__item">
-                        <img src="{{ $brand->logo->url }}" alt="{{ $brand->title }}">
+                        <img src="{{ $brand->logo->url }}" alt="{{ $brand->title }}" >
                         <img src="{{ $brand->logo->url }}" alt="{{ $brand->title }}">
                     </div>
                 @endif

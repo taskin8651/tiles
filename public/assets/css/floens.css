@@ -5260,7 +5260,7 @@ body.megamenu-popup-active .mobile-nav__content {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(var(--floens-black-rgb, 0, 0, 0), 0.5);
+  background-color: rgba(var(--floens-black-rgb, 0, 0, 0), 0.4);
 }
 .main-slider-two .slick-active .main-slider-two__bg {
   transform: scale(1.3);

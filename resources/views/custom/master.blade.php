@@ -9,7 +9,6 @@ $contactdetail = ContactDetail::first();
 
 
 
-$productCategories = ProductCategory::all();
 @endphp
 
 
@@ -87,6 +86,7 @@ $productCategories = ProductCategory::all();
             src="{{ $logo->image_1->url }}" 
             alt="{{ $logo->name ?? config('app.name') }}"
             width="125"
+            height="90"
             class="main-header__logo__one"
         >
     @endif
@@ -97,6 +97,7 @@ $productCategories = ProductCategory::all();
             src="{{ $logo->image_1->url }}" 
             alt="{{ $logo->name ?? config('app.name') }}"
             width="125"
+            height="90"
             class="main-header__logo__two"
         >
     @endif
@@ -132,18 +133,118 @@ $productCategories = ProductCategory::all();
                                     
                                 </li>
 
-                               <li class="dropdown">
-    <a href="{{ url('/products') }}">Products</a>
-    <ul class="sub-menu">
-        @foreach($productCategories as $category)
-            <li>
-                <a href="{{ route('products.index', ['category' => $category->id]) }}">
-                    {{ $category->name }}
-                </a>
-            </li>
-        @endforeach
-    </ul>
+                            <li class="px-3 nav-item dropdown position-static">
+    <a class="nav-link dropdown-toggle"
+       href="{{ url('/products') }}"
+       id="productsDropdown"
+       role="button"
+       data-bs-toggle="dropdown"
+       aria-expanded="false">
+        Products
+    </a>
+
+    <div class="dropdown-menu border-0 shadow mega-menu mt-3">
+        <div class="container-fluid py-4">
+
+            @php
+                use App\Models\Product;
+
+                $sizes = Product::SIZE_SELECT;
+
+                $sizeProducts = Product::select('id','title','size')
+                    ->orderBy('title')
+                    ->get()
+                    ->groupBy('size');
+            @endphp
+
+            <div class="row">
+
+                @foreach($sizes as $sizeKey => $sizeLabel)
+                    @php
+                        $productsBySize = $sizeProducts[$sizeKey] ?? collect();
+                    @endphp
+
+                    @if($productsBySize->count() > 0)
+                        <div class="col-md-3 col-sm-6 mb-4">
+
+                            <div class="p-3 h-100 bg-white rounded">
+
+                                <!-- SIZE TITLE -->
+                                <h6 class="fw-bold border-bottom pb-2 mb-2">
+                                    {{ $sizeLabel }}
+                                </h6>
+
+                                <!-- PRODUCT LIST -->
+                                @foreach($productsBySize as $product)
+                                    <a href="{{ route('products.show', $product->id) }}"
+                                       class="d-block text-muted text-decoration-none mb-1 product-link">
+                                        {{ $product->title }}
+                                    </a>
+                                @endforeach
+
+                            </div>
+
+                        </div>
+                    @endif
+                @endforeach
+
+            </div>
+
+        </div>
+    </div>
 </li>
+<style>
+    /* Full width mega dropdown */
+.mega-menu {
+    width: 100vw;
+    /* left: 50% !important;
+    transform: translateX(-50%) translateY(20px); */
+    opacity: 0;
+    display: block;
+    pointer-events: none;
+    transition: all 0.35s ease;
+}
+
+/* Show dropdown with animation */
+.dropdown.show .mega-menu {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+}
+
+/* Product link style */
+.product-link {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.product-link:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Fix overflow issue */
+.navbar,
+.dropdown-menu {
+    overflow: visible !important;
+}
+
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('show.bs.dropdown', function () {
+            this.classList.add('show');
+        });
+
+        dropdown.addEventListener('hide.bs.dropdown', function () {
+            this.classList.remove('show');
+        });
+    });
+});
+</script>
 
                                 <li class="dropdown">
                                     <a href="/blogs">Blog</a>

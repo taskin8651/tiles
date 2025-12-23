@@ -2,16 +2,19 @@
 @section('title', $product->title)
 @section('content')
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.12.313/pdf_viewer.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.12.313/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.12.313/pdf_viewer.min.js"></script>
 
 
 <style>
-   .floating-download-btn {
+ .floating-download-btn {
     position: fixed;
     bottom: 25px;
     right: 25px;
     width: 60px;
     height: 60px;
-    background: #c29a5c; /* theme color */
+    background: #c29a5c;
     color: #fff;
     border-radius: 50%;
     display: flex;
@@ -26,30 +29,109 @@
 .floating-download-btn:hover {
     background: #a88147;
     transform: scale(1.1);
-    color: #fff;
     text-decoration: none;
 }
 
+/* Optional modal customization */
+#pdfModal .modal-content {
+    border-radius: 12px;
+}
+
+#pdfModal .modal-header {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+#pdfModal .btn-light {
+    background-color: rgba(255,255,255,0.9);
+}
+
+#pdfModal iframe {
+    min-height: 600px;
+}
 
 </style>
 
   @if($product->document)
-    <a href="{{ $product->document->getUrl() }}"
-       download
-       class="floating-download-btn"
-       target="_blank"
-       title="Download Brochure">
+    <!-- Floating Button -->
+    <a href="javascript:void(0);" 
+       class="floating-download-btn" 
+       data-bs-toggle="modal" 
+       data-bs-target="#pdfModal"
+       data-pdf="{{ $product->document->getUrl() }}"
+       title="View Brochure">
         <i class="icon-download"></i>
     </a>
+
+   <!-- PDF Modal -->
+<div class="modal fade" id="pdfModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg">
+            <!-- Modal Header -->
+            <div class="modal-header bg-dark text-white py-3 px-4">
+                <h5 class="modal-title mb-0">Brochure PDF</h5>
+                <div class="ms-auto d-flex align-items-center">
+                    <a href="{{ $product->document->getUrl() }}" 
+                       class="btn btn-light btn-sm me-2" 
+                       target="_blank"
+                       download
+                       title="Download PDF">
+                        <i class="bi bi-download me-1"></i> Download
+                    </a>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                    <iframe src="{{ url('/pdf/'.$product->id) }}" 
+                            width="100%" height="100%" 
+                            style="border:none;" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Optional Footer -->
+            <div class="modal-footer justify-content-center py-2">
+                <small class="text-muted">Use the download button to save the PDF</small>
+            </div>
+        </div>
+    </div>
+</div>
 @endif
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var pdfModal = document.getElementById('pdfModal');
+
+    pdfModal.addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget;
+        var pdfUrl = button.getAttribute('data-pdf');
+        var embed = pdfModal.querySelector('#pdfEmbed');
+        embed.src = pdfUrl;
+
+        // Update modal download button href dynamically
+        var downloadBtn = pdfModal.querySelector('.modal-header a.btn-primary');
+        if(downloadBtn) downloadBtn.href = pdfUrl;
+    });
+
+    pdfModal.addEventListener('hidden.bs.modal', function () {
+        var embed = pdfModal.querySelector('#pdfEmbed');
+        embed.src = ""; // Reset embed when modal closes
+    });
+});
+</script>
+
+
+
 <!-- PAGE HEADER -->
 <section class="page-header">
     <div class="page-header__bg"
          style="background-image: url('{{ asset('assets/images/backgrounds/page-header-bg-1-1.png') }}');">
     </div>
 
-    <div class="container">
-        <h2 class="page-header__title">{{ $product->title }}</h2>
+    <div class="container py-5">
+        <!-- <h2 class="page-header__title">{{ $product->title }}</h2> -->
         <ul class="floens-breadcrumb list-unstyled">
             <li><i class="icon-home"></i> <a href="{{ url('/') }}">Home</a></li>
             <li><a href="{{ route('products.index') }}">Shop</a></li>
@@ -112,7 +194,7 @@
                             <div class="product-details__top">
                                 <div class="product-details__top__left">
                                     <h3 class="product-details__name">{{ $product->title }}</h3><!-- /.product-title -->
-                                    <h4 class="product-details__price">₹{{ number_format($product->price, 2) }} <small class="product-details__price__small" style="font-size: 12px;">(per sq.ft)</small> </h4><!-- /.product-price -->
+                                    <!-- <h4 class="product-details__price">₹{{ number_format($product->price, 2) }} <small class="product-details__price__small" style="font-size: 12px;">(per sq.ft)</small> </h4>/.product-price -->
                                 </div><!-- /.product-details__price -->
                                   @if($product->video)
                             <a href="{{ $product->video->getUrl() }}" 

@@ -86,9 +86,9 @@
                     </p>
                 @endif
 
-                <div class="product__item__price">
+                <!-- <div class="product__item__price">
                     ₹{{ number_format($product->price, 2) }} (per sq.ft)
-                </div>
+                </div> -->
 
                 <a href="javascript:void(0)" class="floens-btn product__item__link">
                     <span>Enquiry Now</span>
