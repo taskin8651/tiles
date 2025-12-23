@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Service;
 use App\Models\ProductCategory;
 use App\Models\AddGallery;
-use App\Models\Contactdetail;
+use App\Models\ContactDetail;
 use App\Models\Product;
 use App\Models\Testimoni;
 use App\Models\Blog;
@@ -24,7 +24,7 @@ class IndexController extends Controller
         // Gallery images + media
         $galleries = AddGallery::with('media')->latest()->get();
 
-         $contactInfo = Contactdetail::first(); // get contact info from config file
+         $contactInfo = ContactDetail::first(); // get contact info from config file
           $products = Product::all(); // get all products
             $testimonials = Testimoni::all(); // get all testimonials
 
