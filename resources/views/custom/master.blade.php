@@ -427,11 +427,11 @@ document.addEventListener('DOMContentLoaded', function () {
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@floens.com">needhelp@floens.com</a>
+                    <a href="mailto:{{ $contactInfo->email }}">{{ $contactInfo->email }}</a>
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
-                    <a href="tel:+9156980036420">+91 5698 0036 420</a>
+                    <a href="tel:+91{{ $contactInfo->phone }}">+91 {{ $contactInfo->phone }}</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__social">
