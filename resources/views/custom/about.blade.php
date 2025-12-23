@@ -314,7 +314,7 @@
                     "margin": 60
                 }
             }
-            }'>
+            }'> 
                      @foreach($brands as $brand)
                 @if($brand->logo)
                     <div class="client-carousel__one__item">
