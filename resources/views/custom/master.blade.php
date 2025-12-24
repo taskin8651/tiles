@@ -5,7 +5,7 @@ use App\Models\ProductCategory;
 
 
 $logo = Logo::first();
-$$contactdetail = ContactDetail::first();
+$contactdetail = ContactDetail::first();
 
 
 
@@ -63,6 +63,46 @@ $$contactdetail = ContactDetail::first();
     @stack('styles')
 </head>
 
+<style>
+    .whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    width: 56px;
+    height: 56px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    z-index: 9999;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.35);
+}
+
+/* Mobile thoda upar */
+@media (max-width: 767px) {
+    .whatsapp-float {
+        bottom: 20px;
+        left: 15px;
+    }
+}
+
+</style>
+
+<a href="https://wa.me/91{{ $contactdetail->number }}" 
+   class="whatsapp-float" 
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
 
 <body class="custom-cursor">
@@ -427,11 +467,11 @@ document.addEventListener('DOMContentLoaded', function () {
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:{{ $contactInfo->email }}">{{ $contactInfo->email }}</a>
+                    <a href="mailto:{{ $contactdetail->email }}">{{ $contactdetail->email }}</a>
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
-                    <a href="tel:+91{{ $contactInfo->phone }}">+91 {{ $contactInfo->phone }}</a>
+                    <a href="tel:+91{{ $contactdetail->phone }}">+91 {{ $contactdetail->phone }}</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__social">
@@ -486,8 +526,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     <li><span class="icon-location-2"></span>
                         <address>85 Ketch Harbour Road Bensal PA 19020</address>
                     </li>
-                    <li><span class="icon-paper-plane"></span> <a href="mailto:{{ $contactInfo->email }}">{{ $contactInfo->email }}</a></li>
-                    <li><span class="icon-phone-call"></span> <a href="tel:+91{{ $contactInfo->phone }}">+91 {{ $contactInfo->phone }}</a></li>
+                    <li><span class="icon-paper-plane"></span> <a href="mailto:{{ $contactdetail->email }}">{{ $contactdetail->email }}</a></li>
+                    <li><span class="icon-phone-call"></span> <a href="tel:+91{{ $contactdetail->phone }}">+91 {{ $contactdetail->phone }}</a></li>
                 </ul><!-- /.sidebar-one__info__list -->
             </div><!-- /.sidebar-one__info -->
             <div class="sidebar-one__social floens-social sidebar-one__item">

@@ -36,7 +36,7 @@
                     </div><!-- /.main-slider-two__wrapper .container -->
                 </div><!-- /.main-slider-two__item -->
                 <div class="main-slider-two__item">
-                    <div class="main-slider-two__bg" style="background-image: url(assets/images/backgrounds/slider-3-4.jpeg);"></div>
+                    <div class="main-slider-two__bg" style="background-image: url(assets/images/backgrounds/slider2.jpeg);"></div>
                     <!-- /.main-slider-two__bg -->
                     <div class="main-slider-two__wrapper container">
                         <div class="main-slider-two__left">
@@ -54,7 +54,7 @@ Quality Tiles <br> for Modern Living
                     </div><!-- /.main-slider-two__wrapper .container -->
                 </div><!-- /.main-slider-two__item -->
                 <div class="main-slider-two__item">
-                    <div class="main-slider-two__bg" style="background-image: url(assets/images/backgrounds/slider-3-4.jpeg);"></div>
+                    <div class="main-slider-two__bg" style="background-image: url(assets/images/backgrounds/slider3.jpeg);"></div>
                     <!-- /.main-slider-two__bg -->
                     <div class="main-slider-two__wrapper container">
                         <div class="main-slider-two__left">
@@ -72,7 +72,7 @@ Elegant Designs <br> Durable Flooring
                     </div><!-- /.main-slider-two__wrapper .container -->
                 </div><!-- /.main-slider-two__item -->
                 <div class="main-slider-two__item">
-                    <div class="main-slider-two__bg" style="background-image: url(assets/images/backgrounds/slider-2-4.jpg);"></div>
+                    <div class="main-slider-two__bg" style="background-image: url(assets/images/backgrounds/slider4.jpeg);"></div>
                     <!-- /.main-slider-two__bg -->
                     <div class="main-slider-two__wrapper container">
                         <div class="main-slider-two__left">
@@ -90,7 +90,7 @@ Trusted Tiles <br> for Every Space
                     </div><!-- /.main-slider-two__wrapper .container -->
                 </div><!-- /.main-slider-two__item -->
                 <div class="main-slider-two__item">
-                    <div class="main-slider-two__bg" style="background-image: url(assets/images/backgrounds/slider-3-4.jpeg);"></div>
+                    <div class="main-slider-two__bg" style="background-image: url(assets/images/backgrounds/slider5.jpeg);"></div>
                     <!-- /.main-slider-two__bg -->
                     <div class="main-slider-two__wrapper container">
                         <div class="main-slider-two__left">
@@ -111,7 +111,81 @@ Floor • Wall <br> Sanitary Collection
         </section><!-- /.main-slider-two -->
         <!-- main slider end -->
 
-      
+      <style>
+   .about-one__single-image {
+    background: #fff;
+    
+}
+
+.about-one__single-image img {
+    width: 100%;
+    
+   
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .about-one__single-image img {
+        height: 520px;
+    }
+}
+
+
+
+</style>
+        <section class="about-one section-space p-0" id="about">
+    <div class="container">
+        <div class="row gutter-y-60 align-items-center">
+
+            <!-- CONTENT : mobile first -->
+            <div class="col-12  order-1 order-lg-1">
+                <div class="about-one__content">
+                    <div class="row gutter-y-30 mt-4">
+                        <div class="col-6">
+                    <div class="sec-title sec-title--border">
+                        <h6 class="sec-title__tagline">about us</h6>
+                        <h3 class="sec-title__title">
+                            Trusted Tiles & Sanitary Solutions by Anand Tiles
+                        </h3>
+                    </div>
+                    </div>
+                    <div class="col-6">
+                    <h5 class="about-one__text-title">
+                        Delivering quality tiles and sanitary ware for over 10 years.
+                    </h5>
+
+                    <p class="about-one__text">
+                        Anand Tiles is a trusted tiles and sanitary ware showroom offering
+                        premium floor tiles, wall tiles, vitrified tiles and modern sanitary
+                        solutions for homes and commercial spaces.
+                    </p>
+
+                     <div class="about-one__button mt-4">
+                        <a href="/contact" class="floens-btn">
+                            <span>get in touch</span>
+                            <i class="icon-right-arrow"></i>
+                        </a>
+                    </div>
+
+                      </div>
+                    </div>
+
+                   
+                </div>
+            </div>
+
+            <!-- IMAGE : only one image -->
+            <div class="col-12  order-2 order-lg-2">
+                <div class="about-one__single-image">
+                    <img src="assets/images/backgrounds/slider-3-4.jpeg" alt="about Anand Tiles">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 
          <section class="work-page work-page--carousel section-space-bottom">
     <div class="container">
