@@ -5,7 +5,7 @@ use App\Models\ProductCategory;
 
 
 $logo = Logo::first();
-$contactdetail = ContactDetail::first();
+$$contactdetail = ContactDetail::first();
 
 
 
